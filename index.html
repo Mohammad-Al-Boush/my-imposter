@@ -1,0 +1,309 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <!-- <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Rubik:ital,wght@0,300..900;1,300..900&family=Sedgwick+Ave&display=swap" rel="stylesheet"> -->
+    <title>برا السالفة</title>
+</head>
+<body>
+    <img class="bg-move" src="image/0.png" alt="">
+    <img class="bg-move" src="image/0.png" alt="">
+    <main>
+        <!--بداية الواجهة  -->
+        <section id="Interface" >
+            <div class="start">
+                <span>
+                    <h1>برا السالفة </h1>
+                    <p>اكتشف مين برا السالفة و ضحاك عليه</p>
+                </span>
+                <img src="image/1.jfif" alt="">
+                <div>
+                    <button id="start">ابدأ اللعب</button>
+                </div>
+            </div>
+        </section>
+        <!-- نهاية الواجهة-->
+
+
+
+        <!-- بداية الكروت -->
+        <section id="Cards" style="translate: 200% -50%;">
+            <div class="card-section">
+                <button class="home">home</button>
+                <h1>اختار نوعية السالفة يا حبي</h1>
+                <div class="card-filed">
+                    <span class="card">
+                        <p>حيوانات</p>
+                        <img src="" alt="" class="img-card">
+                    </span>
+                    <span class="card">
+                        <p>ملابس</p>
+                        <img src="" alt="" class="img-card">
+                    </span>
+                    <span class="card">
+                        <p>بلاد</p>
+                        <img src="" alt="" class="img-card">
+                    </span>
+                    <span class="card">
+                        <p>فواكه</p>
+                        <img src="" alt="" class="img-card">
+                    </span>
+                    <span class="card">
+                        <p>جماد</p>
+                        <img src="" alt="" class="img-card">
+                    </span>
+                    <span class="card">
+                        <p>اماكن</p>
+                        <img src="" alt="" class="img-card">
+                    </span>
+                    <span class="card">
+                        <p>اكلات</p>
+                        <img src="" alt="" class="img-card">
+                    </span>
+                    <span class="card">
+                        <p>منوعات</p>
+                        <img src="" alt="" class="img-card">
+                    </span>
+                </div>
+            </div>
+        </section>
+        <!-- نهاية الكروت -->
+
+
+
+        <!-- بداية الاسماء -->
+        <section id="Names" style="translate: 200% -50%;" >
+            <div class="player-section">
+                <button class="home">home</button>
+                <h1>ادخل اسماء اللاعبين المشاركين <br> <span id="varia">أقل شي 3 لاعبين حبيب القلب!</span> </h1>
+                <div class="player-filed">
+                    <div id="player_list" class="player-names">
+                        <!-- مثال -->
+                        <!-- <span>
+                            <button>-</button>
+                            <p>اب ياسين يا عين</p>
+                        </span>
+                        <span>
+                            <button>-</button>
+                            <p>اب تيم تنسى الهم</p>
+                        </span> -->
+                        <!-- انتهى المثال -->
+                    </div>
+                    <div class="add-player">
+                        <button id="starts" style="opacity: 0.5; pointer-events: none; padding: 5px 20px;">ابدأ لعب يا حلو</button>
+                        <button id="add_user">+</button>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- نهاية الاسماء -->
+
+
+        <!-- بداية إضافة الأسماء -->
+
+        <section id="add_player" style="position: absolute; top: 50%; left:50%; translate:-50% -50%; display: none;"> 
+            <div class="add-player-section" >
+                <h2>ادخل اسم اللاعب ياوردة</h2>
+                <div>
+                    <button id="add">+</button>
+                    <input id="player_name" type="text">
+                </div>
+                <button  id="back">عودة</button>
+            </div>
+        </section>
+
+         <!-- نهاية إضافة الأسماء -->
+
+        <!-- بداية الاختيار -->
+        <section id="choice" style="translate: -50% -50%; display:none;">
+            <div class="choose-section">
+                <span class="the-player">
+                    <button class="home">home</button>
+                    <h1 id="player_1"></h1>
+                    <p>اعطوا الجوال 
+                        <span id="palyers_2"></span>
+                        <br>
+                        !!اضغط التالي لتعرف انت برا السالفة او داخلها... لا تخلي حدا غيرك يشوف السالفة ولا بتندم
+                    </p>
+                </span>
+                <button id="choice_btn">التالي</button>
+            </div>
+        </section>
+        <!-- نهاية الاختيار -->
+
+
+
+
+        <!-- بداية : مين برا السالفة -->
+        <section id="out" style="translate: -50% -50%; display:none;">
+            <div class="choose-section">
+                <span class="the-player">
+                    <button class="home">home</button>
+                    <h1 id="name_out">اب ياسين</h1>
+                    <p id="name_out_player">: انت داخل السالفة و يلي هي
+                        <br>
+                        <span id="dis_out">هامستر مقلي</span>
+                        <br>
+                        امورك بالسليم بس اعرف مين برا السالفة<br> اضغط التالي
+                    </p>
+                </span>
+                <button id="out_btn" >التالي</button>
+            </div>
+        </section>
+        <!-- نهاية : مين برا السالفة -->
+
+
+
+
+
+        <!-- بداية الاسئلة -->
+        <section id="Questions" style="translate: -50% -50%; display:none;">
+            <div class="choose-section">
+                <span class="the-player">
+                    <button class="home">home</button>
+                    <h1>وقت الاسئلة ها قد حان</h1>
+                    <p>كل شخص  رح يسأل شخص تاني <br> اسألوا منيح حتى تعرف مين برا السالفة</p>
+                </span>
+                <button id="qus_to">التالي</button>
+            </div>
+        </section>
+        <!-- نهاية الاسئلة -->
+
+
+
+
+
+        <!-- بداية : مين يسأل مين -->
+        <section id="Ask" style="translate: -50% -50%; display:none;">
+            <div class="choose-section">
+                <span class="the-player">
+                    <button class="home">home</button>
+                    <h1>!اسأل و جاوب يا ولد</h1>
+                    <div>
+                        <span id="ask_to"></span> <p>اسأل الحلو</p> <span id="ask"></span>
+                    </div>
+                    <p>اختار سؤالك بعناية حتى تضحك عليه اذا كان برا السالفة</p>
+                </span>
+                <button id="ask_btn">التالي</button>
+            </div>
+        </section>
+        <!-- نهاية : مين يسأل مين -->
+
+
+
+
+
+        <!-- بداية اسأل على كيفك -->
+        <section id="ask_any" style="translate: -50% -50%; display:none;">
+            <div class="ask-any">
+                <button class="home">home</button>
+                <p> <span id="ask_any_to"></span> <br>: اسأل الشخص يلي بعجبك</p>
+                <div class="ask_player" id="ask_plaeyr_any" style="display: flex; flex-direction: column; gap: 10px; margin-top: 15px;">
+                    <!-- <button>اب مروة</button>
+                    <button>اب علاء</button>
+                    <button>اب تيم</button>
+                    <button>اب نزار</button> -->
+                </div>
+                <button id="foucs" style="position: absolute; bottom: 20px;">تصويت</button>
+            </div>
+        </section>
+        <!-- نهاية اسأل على كيفك -->
+
+
+
+
+
+        <!-- بداية التصويت -->
+        <section id="Vote" style="translate: -50% -50%; display:none;">
+            <div class="ask-any">
+                <button class="home">home</button>
+                <p> <span id="chose_vote">اب ياسين</span> <br>: صوت على الشخص يلي شاكك فيه </p>
+                <div id="vote_player" class="ask-player">
+                    <!-- <button>اب مروة</button>
+                    <button>اب علاء</button>
+                    <button>اب تيم</button>
+                    <button>اب نزار</button> -->
+                </div>
+            </div>
+        </section>
+        <!-- نهاية التصويت -->
+
+
+
+
+        <!-- بداية الكشف عن يلي برا السالفة -->
+        <section id="Reveal" style="translate: -50% -50%; display:none;">
+            <div class="big-revel" >
+                <button class="home">home</button>
+                <h1>:الي برا السالفة هو</h1>
+                <span id="reveal_player" style="display: none;">
+                    اب ياسين
+                </span>
+                    <span id="shadow_vote">tiger</span>
+                <button id="select">التالي</button>
+            </div>
+        </section>
+        <!-- نهاية الكشف عن يلي برا السالفة -->
+
+
+
+
+
+        <!-- بداية اعرف شو هي السالفة -->
+        <section id="find_out" style="translate: -50% -50%; display:none; ">
+            <div class="ask-any">
+                <button class="home">home</button>
+                <p> <span id="your_select">اب ياسين</span> <br> شو هي السالفة برأيك؟</p>
+                <div class="ask-player" id="select_topic">
+                    <!-- <button>همستر مقلي</button>
+                    <button>همستر مدمس</button>
+                    <button>همستر مغلي</button>
+                    <button>همستر ع الفحم</button>
+                    <button>همستر متبل</button>
+                    <button>رز و همستر</button>
+                    <button>شيش همستر</button> -->
+                </div>
+               <div id="repl" style="display: flex; gap: 10px; opacity: 0.5; pointer-events: none; position: absolute; bottom: 20px;">
+                 <button id="news">اللعب مجدداً</button>
+                <button id="home">الرئيسية</button>
+               </div>
+            </div>
+        </section>
+        <!-- نهاية اعرف شو هي السالفة -->
+
+
+
+
+       <!-- الأصوات المستخدمة  -->
+
+       <audio id="click">
+      <source src="audio/dragon-studio-swoosh-1-376872.mp3" type="audio/mpeg" />
+    </audio>
+
+
+     <audio id="clickd">
+      <source src="audio/freesound_crunchpixstudio-button-394464.mp3" type="audio/mpeg" />
+    </audio>
+
+
+ <audio id="click_loss">
+      <source src="audio/freesound_community-failure-1-89170 (1).mp3" type="audio/mpeg" />
+    </audio>
+
+     <audio id="click_win">
+      <source src="audio/succ.mp3" type="audio/mpeg" />
+    </audio>
+    
+     <audio id="click_ul">
+      <source src="audio/click6.mp3" type="audio/mpeg" />
+    </audio>
+    </main>
+</body>
+
+
+<script src="main.js"></script>
+</html>
