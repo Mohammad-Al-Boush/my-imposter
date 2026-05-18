@@ -21,6 +21,14 @@ html {
   width: 100%;
   height: 100%;
   overflow: hidden;
+     /* إخفاء لكروم وسافاري */
+    &::-webkit-scrollbar {
+        display: none;
+    }
+    
+    /* إخفاء لفايرفوكس وإكسبلورر */
+    scrollbar-width: none;
+    -ms-overflow-style: none;
 }
 
 main {
@@ -387,13 +395,15 @@ span {
 
 /* نهاية إضافة الأسماء  */
 
-@media (max-width: 767px) {
+@media (max-width:667px) {
   h1 {
-    font-size: 30px;
+    font-size: 20px;
     margin: 6px;
+    margin-top: 20px;
   }
+  
   button {
-    font-size: 36px;
+    font-size: 20px;
   }
   .bg-move {
     width: 150%;
@@ -401,6 +411,8 @@ span {
   }
   .home {
     font-size: 20px;
+    top: -10px;
+    left: -10px;
   }
   .start {
     width: 75%;
@@ -414,11 +426,40 @@ span {
     width: 60%;
   }
   .player-section h1 {
-    margin-top: 36px;
+    margin-top: 100px;
     font-size: 30px;
   }
+  .player-names{
+
+    margin-bottom: 30px;
+    overflow-y:scroll;
+    overflow-x: visible;
+    padding-left: 50px;
+    padding-right: 50px;
+    border-radius:30px;
+
+     /* 1. لمتصفحات كروم، إيدج، وسافاري (الموبايل والكمبيوتر) */
+    &::-webkit-scrollbar {
+        display: none;
+    }
+
+    /* 2. لمتصفح فايرفوكس */
+    scrollbar-width: none;
+
+    /* 3. لمتصفحات إنترنت إكسبلورر القديمة */
+    -ms-overflow-style: none; 
+    
+    /* ميزة التمرير الناعم السلس على الموبايل */
+    -webkit-overflow-scrolling: touch; 
+  }
+  .add-player{
+    margin-bottom: 70px;
+  }
+  .add-player button{
+    font-size: 20px;
+  }
   .card {
-    width: 40%;
+    width: 35%;
     height: 20%;
   }
   .the-player {
@@ -435,4 +476,5 @@ span {
     width: 100%;
     height: 30%;
   }
+
 }
