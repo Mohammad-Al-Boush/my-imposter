@@ -269,6 +269,7 @@ cards.forEach((card, index) => {
 
 add_user.onclick = () => {
   show(add_player, cards[0]);
+  player_name.focus();
 };
 
 add.onclick = () => {
