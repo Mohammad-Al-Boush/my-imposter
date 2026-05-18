@@ -397,6 +397,9 @@ span {
 /* نهاية إضافة الأسماء  */
 
 @media (max-width:667px) {
+  section{
+        margin-bottom: 50px;
+    }
   h1 {
     font-size: 20px;
     margin: 6px;
@@ -404,7 +407,7 @@ span {
   }
   
   button {
-    font-size: 20px;
+    font-size: 25px;
   }
   .bg-move {
     width: 150%;
