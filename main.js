@@ -195,7 +195,7 @@ function select_vote() {
             
             // 🔥 هنا يشتغل صوت الفوز فوراً عند كشف اللاعب الأخير!
             click_win.play(); 
-              select.style.pointerEvents: visible;
+              select.style.pointerEvents = visible;
               select.style.opacity = "1";
             
             return; // الخروج من الدالة
