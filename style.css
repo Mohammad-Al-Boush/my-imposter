@@ -5,6 +5,7 @@
   scroll-behavior: smooth;
   font-family: "Rubik", sans-serif;
   transition: 0.25s;
+  
 }
 :root {
   --first: #e4eb9c;
@@ -451,6 +452,10 @@ span {
     
     /* ميزة التمرير الناعم السلس على الموبايل */
     -webkit-overflow-scrolling: touch; 
+  }
+    .player-names button{
+
+    font-size: 36px;
   }
   .add-player{
     margin-bottom: 70px;
