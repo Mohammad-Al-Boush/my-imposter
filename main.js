@@ -91,6 +91,16 @@ function giv(index) {
 
        if(feak_players[feak_players.length - 1] === "اب نزار" || feak_players[feak_players.length - 1] === "ابو نزار" ||feak_players[feak_players.length - 1] === "أب نزار" || feak_players[feak_players.length - 1] === "أبو نزار" || feak_players[feak_players.length - 1] === "tiger" || feak_players[feak_players.length - 1] === "Tiger"){
           document.getElementById("leo").innerHTML = cata[topic][random_topic];
+          document.body.addEventListener("touchstart",()=>{
+            setTimeout(()=>{
+              document.getElementById("leo").style.opacity = "1";
+            },1000)
+            document.body.addEventListener("touchend",()=>{
+              document.getElementById("leo").style.opacity = "0";
+
+            });
+            
+          });
         
         }
         else{
